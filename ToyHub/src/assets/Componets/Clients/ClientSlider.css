@@ -1,0 +1,84 @@
+.client-slider {
+  padding: 20px 0;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-slider img {
+  width: 23vh;
+  height: auto;
+  object-fit: contain;
+}
+
+.Client-relative-contant-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50vh;
+    width: 100%;
+    background-color: #e0c372;
+    margin-top: 5vh;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Background image styling */
+.Client-relative-contant-section img {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 80%;
+    max-width: 500px;
+    /* opacity: 0.15;  */
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+/* Text container */
+.Client-relative-contant {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+/* Heading */
+.Client-relative-contant-section h1 {
+    font-size: 32px;
+    letter-spacing: 0.5px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+.Client-relative-contant-section p {
+    width: 62vw;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    .Client-relative-contant-section {
+        height: auto;
+        padding: 40px 20px;
+    }
+    .Client-relative-contant-section img {
+        width: 100%;
+        max-width: 400px;
+    }
+    .Client-relative-contant-section p {
+        width: 90%;
+        font-size: 16px;
+    }
+    .Client-relative-contant-section h1 {
+        font-size: 26px;
+    }
+}
