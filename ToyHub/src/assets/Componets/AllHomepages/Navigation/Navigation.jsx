@@ -10,7 +10,7 @@ const Navigation = () => {
     <nav className="navbar">
       <div className="nav-container">
         {/* Logo */}
-        <Link to="/"><img src="public/logo.png/Toyslogo.png" alt="" /></Link>
+        <Link to="/"><img src="/logo.png/Toyslogo.png" alt="" /></Link>
 
         {/* Desktop Menu */}
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
