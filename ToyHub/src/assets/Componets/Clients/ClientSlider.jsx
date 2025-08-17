@@ -47,7 +47,7 @@ function ClientSlider() {
 
             <section>
                 <div className='Client-relative-contant-section'>
-                    <img src="public/img.png/boy.png" alt="" />
+                    <img src="/img.png/boy.png" alt="" />
                     <div className='Client-relative-contant'>
                         <h1>Why Choose Us ?</h1>
                         <p>
