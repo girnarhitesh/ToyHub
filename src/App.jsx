@@ -16,7 +16,7 @@ function App() {
         <SmoothCursor />
         <Routes>
           <Route path='/' element={<AllHomepages />} />
-          <Route path='/about'element={<AboutSection/>}/>
+          <Route path='/about' element={<AboutSection />} />
         </Routes>
       </BrowserRouter>
 

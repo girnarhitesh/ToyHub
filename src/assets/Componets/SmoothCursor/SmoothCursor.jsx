@@ -6,7 +6,7 @@ const SmoothCursor = () => {
   const cursorRef = useRef(null);
   let mouseX = 0, mouseY = 0;
   let circleX = 0, circleY = 0;
-  const speed = 0.1; // Smoothness (lower = smoother & slower)
+  const speed = 0.08; // Lower = smoother, slower movement
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -17,9 +17,9 @@ const SmoothCursor = () => {
     const animate = () => {
       circleX += (mouseX - circleX) * speed;
       circleY += (mouseY - circleY) * speed;
+
       if (cursorRef.current) {
-        cursorRef.current.style.left = `${circleX}px`;
-        cursorRef.current.style.top = `${circleY}px`;
+        cursorRef.current.style.transform = `translate3d(${circleX}px, ${circleY}px, 0)`;
       }
       requestAnimationFrame(animate);
     };

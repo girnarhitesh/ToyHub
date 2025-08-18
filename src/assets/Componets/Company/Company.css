@@ -1,0 +1,171 @@
+.company-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.company-title {
+    color: black;
+    font-size: 3rem;
+    font-weight: 700;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.company-subtitle {
+    color: black;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    font-weight: 300;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-description {
+    color: black;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    color: #34495e;
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 2rem;
+    font-weight: 500;
+}
+
+
+/* Image Gallery */
+.gallery-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 40vh !important;
+    object-fit: cover;
+    /* Full cover without stretching */
+    border-radius: 12px;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+/* Car container */
+.Car-section-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    /* padding: 50px 20px; */
+}
+
+/* Left side image */
+.Car-img-section {
+    width: 100%;
+}
+
+.Car-img-section img {
+    width: 50vw;
+    border-radius: 20px 80px 20px 200px;
+    height: 40vw;
+    object-fit: cover;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    animation: floatImg 6s ease-in-out infinite; /* image float animation */
+}
+
+/* Floating effect */
+@keyframes floatImg {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Right side text */
+.Car-realtive-contant-section h1 {
+    font-size: 1.9rem;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    color: #ff6f61;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.Car-realtive-contant-section p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 2.6vh;
+    color: #444;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+/* Scroll animation visible */
+.Car-realtive-contant-section.show h1,
+.Car-realtive-contant-section.show p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Car moving bottom */
+.moving-toy-car {
+  position: absolute;
+  bottom: 20px;
+  left: -120px;
+  animation: driveCar 12s linear infinite alternate;
+}
+
+.moving-toy-car img {
+  width: 120px;
+  height: auto;
+}
+
+/* left → right → turn → left */
+@keyframes driveCar {
+  0% { transform: translateX(0) scaleX(1); }
+  50% { transform: translateX(calc(100vw - 150px)) scaleX(1); }
+  51% { transform: translateX(calc(100vw - 150px)) scaleX(-1); }
+  100% { transform: translateX(0) scaleX(-1); }
+}
+

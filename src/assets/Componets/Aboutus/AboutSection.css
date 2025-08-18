@@ -28,22 +28,144 @@
     margin-top: 1vh;
     line-height: 25px;
 }
-.About-section-img {
-  display: flex;              /* image को center align करने के लिए */
-  justify-content: center;    /* horizontally center */
-  align-items: center;        /* vertically center (अगर height fix है) */
-  margin: 20px auto;          /* auto margin for centering block */
-           /* responsive */
+.About-section-img img {
+  width: 100%;          
+  height: auto;          
+  border-radius: 12px;        
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.About-section-img img {
-  width: 100%;                /* responsive image */
-          
-  height: auto;               /* aspect ratio maintain */
-  border-radius: 12px;        /* rounded corners */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* attractive shadow */
-  object-fit: cover;          /* crop करके fit करेगा */
+/* mission & vision //  */
+.about-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+
+.highlight {
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+.mission-vision-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 2.8rem;
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+.toy-icons {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  color: #ffb703;
+}
+
+.mission-card {
+  background: linear-gradient(135deg, #fff7f3, #ffe8e0);
+}
+
+.vision-card {
+  background: linear-gradient(135deg, #f3f8ff, #e0ebff);
+}
+
+/* Cute animated bubble background inside cards */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 111, 97, 0.15);
+  border-radius: 50%;
+  transition: 0.4s ease;
+}
+
+.card:hover::before {
+  transform: scale(1.2);
+  background: rgba(255, 111, 97, 0.25);
+}
+.mission-vision-section {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 4vh;
+}
+
+.moving-car {
+  position: absolute;
+  bottom: 20px;
+  left: -150px; /* shuru screen ke bahar */
+  animation: driveCar 10s linear infinite alternate;
+}
+
+.moving-car img {
+  width: 120px; /* car size */
+  height: auto;
+}
+
+/* Animation: car left → right → left */
+@keyframes driveCar {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(calc(100vw - 150px)) scaleX(1);
+  }
+  51% {
+    transform: translateX(calc(100vw - 150px)) scaleX(-1); /* turn car */
+  }
+  100% {
+    transform: translateX(0) scaleX(-1);
+  }
 }
 
  
