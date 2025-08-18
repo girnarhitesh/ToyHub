@@ -28,4 +28,22 @@
     margin-top: 1vh;
     line-height: 25px;
 }
+.About-section-img {
+  display: flex;              /* image को center align करने के लिए */
+  justify-content: center;    /* horizontally center */
+  align-items: center;        /* vertically center (अगर height fix है) */
+  margin: 20px auto;          /* auto margin for centering block */
+           /* responsive */
+}
 
+.About-section-img img {
+  width: 100%;                /* responsive image */
+          
+  height: auto;               /* aspect ratio maintain */
+  border-radius: 12px;        /* rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* attractive shadow */
+  object-fit: cover;          /* crop करके fit करेगा */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ 

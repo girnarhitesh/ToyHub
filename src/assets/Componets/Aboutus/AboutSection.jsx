@@ -21,6 +21,9 @@ function AboutSection() {
                                     From concept to completion, our dedicated team ensures every detail is handled with precision and care. We combine modern innovation with time-tested craftsmanship to deliver results that exceed expectations.
                                 </p>
                             </div>
+                            <div className="About-section-img" >
+                                <img src="/img.png/unnamed-pica.png" alt="" />
+                            </div>
                         </div>
                     </Col>
                 </Row>
