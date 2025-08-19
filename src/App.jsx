@@ -5,6 +5,7 @@ import Navigation from './assets/Componets/AllHomepages/Navigation/Navigation'
 import AllHomepages from './assets/Componets/AllHomepages/AllHomepages'
 import SmoothCursor from './assets/Componets/SmoothCursor/SmoothCursor'
 import AboutSection from './assets/Componets/Aboutus/AboutSection'
+import Products from './assets/Componets/Products/Products'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<AllHomepages />} />
           <Route path='/about' element={<AboutSection />} />
+          <Route path='/products' element={<Products />} />
         </Routes>
       </BrowserRouter>
 
